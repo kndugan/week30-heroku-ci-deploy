@@ -18,6 +18,11 @@ app.use(bodyParser.json());
 // -------------------------------------------
 app.use(express.static('public'));
 
+// testing
+const hello = () => "Hello World";
+console.log(hello());
+exports.hello = hello;
+
 // init the data store
 db.defaults({ users: [] }).write();
 
